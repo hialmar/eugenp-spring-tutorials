@@ -121,7 +121,7 @@ public class Controller {
         return Thread.getAllStackTraces()
           .keySet()
           .stream()
-          .map(t -> String.format("%-20s \t %s \t %d \t %s\n", t.getName(), t.getState(), t.getPriority(), t.isDaemon() ? "Daemon" : "Normal"))
+          .map(t -> String.format("%-20s \t %s \t %d \t %s\n", t.getName(), t.getState(), t.getPriority(), t.isDaemon() ? "Daemon<br>" : "Normal<br>"))
           .collect(Collectors.toList());
     }
 }
