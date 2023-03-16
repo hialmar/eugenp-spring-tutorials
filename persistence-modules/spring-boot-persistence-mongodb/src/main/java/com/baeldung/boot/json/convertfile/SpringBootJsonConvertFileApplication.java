@@ -13,8 +13,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.baeldung.boot.json.convertfile.service.ImportJsonService;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
+@PropertySource("classpath:secret.properties")
 public class SpringBootJsonConvertFileApplication implements ApplicationRunner {
     private Logger log = LogManager.getLogger(this.getClass());
     private static final String RESOURCE_PREFIX = "classpath:";
